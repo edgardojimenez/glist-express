@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.hide add
+    div.viewframe
+        h3 add products
+            form(method='POST', action='/products/add')
+                input(type='text', id='productName', name='productName', style='width:100%', placeholder='product name...')
+                label.checkbox.label-padd
+                    input(type='checkbox', id='addToList', name='addToList')
+                    span.text-infos include in grocery
+                input(type='submit', id='saveProduct', style='width:100%', class='btn btn-info', value='Save')

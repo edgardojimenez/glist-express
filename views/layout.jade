@@ -1,0 +1,25 @@
+doctype 5
+html
+  head
+    title glist
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css', media="screen")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#page
+        div.navbar
+            div.navbar-inner
+                ul.nav
+                    li.active
+                        a(href='/') #{locals.menu[0]}
+                    li
+                        a(href='/products') #{locals.menu[1]}
+                    li
+                        a(href='/products/add') #{locals.menu[2]}
+        div#message.hide.alert
+            button(id='close', type="button", class="close", data-dismiss="alert") &times;
+            div#messageContent #{message}
+    block content
+    script(src='http://code.jquery.com/jquery-2.0.3.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/scripts.js')

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.hide list
+    div.viewframe
+        h3 grocery list
+        div
+          each item in groceries
+            blockquote
+                div.media
+                    input(class='pull-left', type='checkbox')
+                    a(class='btn pull-right', href='/groceries/del/#{item.name}', id='#{item.name}')
+                        i.icon-remove
+                    div.media-body
+                        h4.media-heading.text-info #{item.name}

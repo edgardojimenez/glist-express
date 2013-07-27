@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div.hide products
+    div.viewframe
+        h3 products
+        div
+            each item in products
+                blockquote
+                    div.media-body
+                      - if (item.product.length === 1 || item.selected)
+                        h4.media-heading #{item.product}
+                      - else
+                        a(class='btn pull-right', href='/products/del/#{item.product}', id='#{item.product}')
+                            i.icon-trash
+                        a(href='/groceries/add/#{item.product}')
+                            h4.media-heading.text-info #{item.product}
+

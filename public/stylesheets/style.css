@@ -1,0 +1,16 @@
+.viewframe { padding: 0 20px 0 20px;}
+.blue { color: #0088cc;}
+.label-padd {padding-bottom: 8px; }
+.hide { display: none;}
+#message { margin: 20px;}
+
+.modal {
+    position: fixed;
+    top: 6%;
+    right: 3%;
+    left: 3%;
+    /*bottom: 3%;*/
+    width: auto;
+    margin: 0;
+}
+blockquote {margin: 0 0 5px;}
