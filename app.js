@@ -11,15 +11,18 @@ var express = require('express'),
 
 var app = express();
 
-if (!process.env.mongodbConnection)
-    config = require('./config');
-
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('isProduction', 'development' !== app.get('env'));
-app.set('mongo-connection', config.mongodbConnection);
+
+if (process.env.mongodbConnection) {
+    app.set('mongo-connection', process.env.mongodbConnection);
+} else {
+    config = require('./config');
+    app.set('mongo-connection', config.mongodbConnection);
+}
 
 // Middleware
 app.use(express.favicon());
