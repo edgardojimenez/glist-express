@@ -46,17 +46,18 @@ var glist = (function () {
 
     function setConfimPrompts() {
         var i,
-            buttons = document.querySelectorAll('div.media-body > img.icon-trash');
+            buttons = document.querySelectorAll('i.icon-trash');
 
         for (i = 0; i < buttons.length; ++i) {
             buttons[i].addEventListener('click', function (e) {
                 var link = e.srcElement.parentElement;
+                e.preventDefault();
                 confirm('Delete Product',
                     'Are you sure you want to delete the product?',
                     'Cancel',
                     'Ok',
                     function() {
-                        link.click();
+                        location.href = link.href;
                     }
                 );
 
