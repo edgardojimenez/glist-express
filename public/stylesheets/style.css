@@ -3,6 +3,8 @@
 .label-padd {padding-bottom: 8px; }
 .hide { display: none;}
 #message { margin: 20px;}
+.listed {color: #9DA0A4;}
+
 
 .modal {
     position: fixed;
@@ -13,4 +15,4 @@
     width: auto;
     margin: 0;
 }
-blockquote {margin: 0 0 5px;}
+blockquote {margin: 0 0 10px;}

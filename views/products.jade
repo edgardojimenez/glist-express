@@ -8,9 +8,11 @@ block content
             each item in products
                 blockquote
                     div.media-body
-                      - if (item.product.length === 1 || item.selected)
+                      - if (item.product.length === 1)
                         h4.media-heading #{item.product}
-                      - else
+                      - if (item.product.length > 1 && item.selected)
+                        h4.media-heading.listed #{item.product}
+                      - if (item.product.length > 1 && !item.selected)
                         a(class='btn pull-right', href='/products/del/#{item.product}', id='#{item.product}')
                             i.icon-trash
                         a(href='/groceries/add/#{item.product}')
