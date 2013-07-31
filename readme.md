@@ -14,7 +14,7 @@ Backend
 * Javascript
 * Node.js       (server side code)
 * Express.js    (web app framework)
-* MongoDB       (database)
+* MongoDB       (database from Mongo Labs)
 * Mongoose.js   (node to mongodb wrapper)
 * Mocha.js      (test framework)
 * Jade          (view engine)
